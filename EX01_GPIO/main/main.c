@@ -41,6 +41,9 @@
 #define LED_2			GPIO_NUM_5 
 #define BUTTON			GPIO_NUM_4 
 
+/* Protótipos de Funções */
+void app_main( void );
+
 /* Variáveis Globais */
 static const char *TAG = "main";
 const char * msg[2] = {"Ligado", "Desligado"};
