@@ -75,7 +75,7 @@ static int s_retry_num = 0;
 
 /*
   Função de callback responsável em receber as notificações durante as etapas de conexão do WiFi.
-  Por meio desta função de callback podemos saber o momento em que o WiFi do ESP32 foi inicializado com sucesso
+  Por meio desta função de callback podemos saber o momento em que o WiFi do ESP8266 foi inicializado com sucesso
   até quando é recebido o aceite do IP pelo roteador (no caso de Ip dinâmico).
   ref: https://github.com/espressif/esp-idf/tree/c77c4ccf6c43ab09fd89e7c907bf5cf2a3499e3b/examples/wifi/getting_started/station
 */
@@ -94,7 +94,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
         if (s_retry_num < EXAMPLE_ESP_MAXIMUM_RETRY) {
 			/*
 			Se chegou aqui foi devido a falha de conexão com a rede WiFi.
-			Por esse motivo, haverá uma nova tentativa de conexão WiFi pelo ESP32.
+			Por esse motivo, haverá uma nova tentativa de conexão WiFi pelo ESP8266.
 			*/
             esp_wifi_connect();
             s_retry_num++;
